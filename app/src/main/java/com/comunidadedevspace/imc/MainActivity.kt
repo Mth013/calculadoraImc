@@ -48,7 +48,10 @@ class MainActivity : AppCompatActivity() {
                 // Criar o layout da proxima tela
                 // Passar dados(resultado) para proxima tela
 
+                // Chamando a próxima tela e levando dados até ela com INTENT
                 val intent = Intent(this, ResulActivity::class.java)
+                              // Variavel que armazena a chave de acesso dos dados para proxima tela
+                intent.putExtra(KEY_RESULT_IMC, resultado)
                 startActivity(intent)
 
                 println("Ação do botao " + resultado)
